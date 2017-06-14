@@ -19,7 +19,8 @@
     </property>
   </bean>
 
-  <!-- 配置JSP视图 -->
+  <!--
+   //配置JSP视图
   <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
     <property name="prefix" value="/WEB-INF/jsp/"/>
@@ -28,7 +29,7 @@
     <property name="order" value="0"/>
   </bean>
 
-  <!-- 配置FreeMark视图 -->
+  //配置FreeMark视图
   <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
     <property name="contentType" value="text/html;charset=UTF-8"/>
     <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
@@ -37,10 +38,12 @@
     <property name="exposeSessionAttributes" value="true"/>
     <property name="exposeRequestAttributes" value="true"/>
     <property name="exposeSpringMacroHelpers" value="true"/>
-    <!-- 在页面中使用${rc.contextPath}就可获得contextPath -->
+    //在页面中使用${rc.contextPath}就可获得contextPath
     <property name="requestContextAttribute" value="rc"/>
     <property name="order" value="1"/>
   </bean>
+
+  -->
 
   <!-- 文件上传配置注意:这里申明的id必须为multipartResolver -->
 

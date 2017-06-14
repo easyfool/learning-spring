@@ -8,7 +8,7 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:spring/springmvc/applicationContext.xml</param-value>
+    <param-value>classpath:spring/applicationContext.xml</param-value>
   </context-param>
 
   <!-- 在Spring框架中是如何解决从页面传来的字符串的编码问题的呢？
@@ -66,8 +66,8 @@
       <param-value>/WEB-INF/spring-servlet.xml</param-value>
     </init-param>
     <!--启动顺序，让这个servlet随servlet容器一起启动-->
-    <!--TODO 启动jetty报错-->
-    <!--<load-on-startup>1</load-on-startup>-->
+    <!--TODO if missing below,启动jetty报错-->
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <!--声明DispatcherServlet处理哪些URL-->
   <servlet-mapping>

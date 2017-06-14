@@ -6,7 +6,7 @@
   <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
     p:driverClass="${jdbc.driverClass}"
     p:jdbcUrl="${jdbc.url}"
-    p:user="${jdbc.user}"
+    p:user="${jdbc.username}"
     p:password="${jdbc.password}"
     p:acquireIncrement="${jdbc.acquireIncrement}"
     p:initialPoolSize="${jdbc.initialPoolSize}"

@@ -7,57 +7,9 @@
     <property name="name" value="wangfeng"/>
   </bean>
 
-  <!-- if scope is not set,it is singleton by default -->
-  <bean id="prototypeCustomer" class="com.wangfengbabe.learning_spring.BeanScope" scope="prototype">
-  </bean>
+  <bean id="defaultLocator" class="com.wangfengbabe.learning_spring.DefaultServiceLocator"/>
+  <bean id="accountService" factory-bean="defaultLocator" factory-method="createAccountService"/>
+  <bean id="clientService" factory-bean="defaultLocator" factory-method="createClientService"/>
 
-  <!-- if scope is not set,it is singleton by default -->
-  <bean id="singletonCustomer" class="com.wangfengbabe.learning_spring.BeanScope" scope="singleton">
-  </bean>
-
-  <bean id="beanWithCollectionProperty" class="com.wangfengbabe.learning_spring.BeanWithCollectionProperty">
-    <!-- java.util.List -->
-    <property name="list">
-      <list>
-        <value>1</value>
-        <ref bean="singletonCustomer"/>
-        <bean class="com.wangfengbabe.learning_spring.beanbasic.innerBean.Person">
-          <property name="name" value="mkyongList"/>
-          <property name="age" value="28"/>
-        </bean>
-      </list>
-    </property>
-
-    <!-- java.util.Set -->
-    <property name="set">
-      <set>
-        <value>1</value>
-        <ref bean="singletonCustomer"/>
-        <bean class="com.wangfengbabe.learning_spring.beanbasic.innerBean.Person">
-          <property name="name" value="mkyongList"/>
-          <property name="age" value="28"/>
-        </bean>
-      </set>
-    </property>
-
-    <!-- java.util.Map -->
-    <property name="map">
-      <map>
-        <entry key="key1" value="value1"/>
-        <entry key="key2" value-ref="singletonCustomer"/>
-        <entry key="key3">
-          <bean class="com.wangfengbabe.learning_spring.beanbasic.injectValue.normalway.Person"/>
-        </entry>
-      </map>
-    </property>
-
-    <!-- java.util.Properties -->
-    <property name="properties">
-      <props>
-        <prop key="key1">wangfengabbe.com</prop>
-        <prop key="key2">zhaochi.com</prop>
-      </props>
-    </property>
-  </bean>
 
 </beans>
