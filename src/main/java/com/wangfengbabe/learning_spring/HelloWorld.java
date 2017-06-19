@@ -5,17 +5,17 @@ package com.wangfengbabe.learning_spring;
  */
 public class HelloWorld {
 
-  private String name;
+  private String message;
 
-  public String getName() {
-    return name;
+  public void setMessage(String message) {
+    this.message = message;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public String getMessage() {
+    return message;
   }
 
-  public void printHello() {
-    System.out.println("hello " + name);
+  public void printMessage() {
+    System.out.println(message);
   }
 }

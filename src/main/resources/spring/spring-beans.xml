@@ -3,13 +3,4 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  <bean id="helloWorld" class="com.wangfengbabe.learning_spring.HelloWorld">
-    <property name="name" value="wangfeng"/>
-  </bean>
-
-  <bean id="defaultLocator" class="com.wangfengbabe.learning_spring.DefaultServiceLocator"/>
-  <bean id="accountService" factory-bean="defaultLocator" factory-method="createAccountService"/>
-  <bean id="clientService" factory-bean="defaultLocator" factory-method="createClientService"/>
-
-
 </beans>

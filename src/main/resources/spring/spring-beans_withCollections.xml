@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="complexObject" class="com.wangfengbabe.learning_spring.dependencyWithCollections.ComplexObject">
+    <property name="adminEmails">
+      <props>
+        <prop key="administrator">administrator@163.com</prop>
+        <prop key="support">support@163.com</prop>
+        <prop key="development">development@163.com</prop>
+      </props>
+    </property>
+    <property name="someList">
+      <list>
+        <value>hello world</value>
+        <ref bean="environment"/>
+      </list>
+    </property>
+    <property name="someMap">
+      <map>
+        <entry key="key one" value="value one"></entry>
+        <entry key="key two" value="value two"></entry>
+      </map>
+    </property>
+    <property name="someSet">
+      <set>
+        <value>just one thing</value>
+        <ref bean="environment"/>
+      </set>
+    </property>
+  </bean>
+</beans>

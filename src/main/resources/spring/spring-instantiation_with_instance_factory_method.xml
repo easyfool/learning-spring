@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!--instance factory method-->
+  <bean id="bigFactory" class="com.wangfengbabe.learning_spring.factorymethod.BigFactory"/>
+  <bean id="circle_by_factory" factory-bean="bigFactory" factory-method="createCircle"/>
+  <bean id="biography" factory-bean="bigFactory" factory-method="createBiography"/>
+
+  <bean id="defaultLocator" class="com.wangfengbabe.learning_spring.factorymethod.DefaultServiceLocator"/>
+  <bean id="accountService" factory-bean="defaultLocator" factory-method="createAccountService"/>
+  <bean id="clientService" factory-bean="defaultLocator" factory-method="createClientService"/>
+</beans>

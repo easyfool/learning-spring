@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!--constructor dependency-->
+  <bean id="wheel" class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Wheel">
+    <constructor-arg value="Bolon tyre"/>
+  </bean>
+
+  <bean id="exampleBean_constructorDependency_default"
+    class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Car">
+    <constructor-arg value="Benz"/>
+    <constructor-arg value="30"/>
+    <constructor-arg ref="wheel"/>
+  </bean>
+
+  <bean id="exampleBean_constructorDependency_with_type"
+    class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Car">
+    <constructor-arg type="int" value="30 "/>
+    <constructor-arg type="java.lang.String" value="Benz"/>
+    <constructor-arg type="com.wangfengbabe.learning_spring.instantiation.withConstructor.Wheel" ref="wheel"/>
+  </bean>
+
+  <bean id="exampleBean_constructorDependency_with_index"
+    class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Car">
+    <constructor-arg index="0" value="Benz"/>
+    <constructor-arg index="1" value="30"/>
+    <constructor-arg ref="wheel"/>
+  </bean>
+
+  <bean id="exampleBean_constructorDependency_with_name"
+    class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Car">
+    <constructor-arg name="years" value="30 "/>
+    <constructor-arg name="name" value="Benz"/>
+    <constructor-arg ref="wheel"/>
+  </bean>
+
+</beans>

@@ -11,11 +11,9 @@ public class AliasTest {
 
   @Test
   public void testAlias() {
-    ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
+    ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring/spring-alias.xml");
     HelloWorld helloWorld_wangfeng = (HelloWorld) context.getBean("wangfengHelloworld");
-    helloWorld_wangfeng.printHello();
     HelloWorld helloWorld_zhaochi = (HelloWorld) context.getBean("zhaochiHelloworld");
-    helloWorld_zhaochi.printHello();
   }
 
 }
