@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by wangfeng on 15/06/2017.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:spring/spring-beans.xml")
+@ContextConfiguration("classpath:spring/spring-depends_on.xml")
 public class DependsOnTest {
 
   @Autowired

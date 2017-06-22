@@ -10,18 +10,18 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
 
   public MyBeanPostProcessor() {
     super();
-    System.out.println("constructor of concrete BeanPostProccessor ");
+//    System.out.println("BeanPostProccessor:constructor of concrete  ");
   }
 
   @Override
   public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-    System.out.println("postProcessBeforeInitialization method is called in BeanPostProccessor");
+    System.out.println("BeanPostProccessor:postProcessBeforeInitialization");
     return bean;
   }
 
   @Override
   public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-    System.out.println("postProcessAfterInitialization method is called in BeanPostProccessor");
+    System.out.println("BeanPostProccessor:postProcessAfterInitialization");
     return bean;
   }
 }

@@ -16,8 +16,10 @@ public class SpringBeanLifeCycle {
     System.out.println("initialize context container");
     ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
         "classpath:spring/spring-beans_lifecycle.xml");
+    Animal animal = (Animal) context.getBean("animal");
+    
     Person person = (Person) context.getBean("person");
-    System.out.println(person);
+
     System.out.println("close context container");
     context.registerShutdownHook();
   }

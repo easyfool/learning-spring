@@ -6,11 +6,14 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
 /**
  * Created by wangfeng on 18/06/2017.
  */
-public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean, DisposableBean {
+public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean,
+    DisposableBean {
 
   private String name;
   private String address;
@@ -39,7 +42,7 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
   }
 
   public void setName(String name) {
-    System.out.println("inject property [name] by setter");
+    System.out.println("setter: [name]");
     this.name = name;
   }
 
@@ -48,7 +51,7 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
   }
 
   public void setAddress(String address) {
-    System.out.println("inject property [address] by setter");
+    System.out.println("setter: [address] ");
     this.address = address;
   }
 
@@ -57,7 +60,7 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
   }
 
   public void setPhone(int phone) {
-    System.out.println("inject property [phone] by setter");
+    System.out.println("setter: [phone] ");
     this.phone = phone;
   }
 
@@ -72,31 +75,36 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
   @Override
 
   public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-    System.out.println("BeanfactoryAware.setBeanFactory is called");
+    System.out.println("BeanfactoryAware:setBeanFactory");
     this.beanFactory = beanFactory;
   }
 
   @Override
   public void setBeanName(String beanName) {
-    System.out.println("BeanNameAware.setBeanName is called");
+    System.out.println("BeanNameAware:setBeanName");
     this.beanName = beanName;
   }
 
   @Override
   public void destroy() throws Exception {
-    System.out.println("destroy method is called with desposable bean");
+    System.out.println("DisposableBean: destroy() method");
   }
 
   @Override
   public void afterPropertiesSet() throws Exception {
-    System.out.println("afterPropertiesSet method is called with InitializingBean");
+    System.out.println("InitializingBean : afterPropertiesSet() method");
   }
 
   public void myInit() {
-    System.out.println("customerize initialize method is called  with init-method");
+    System.out.println("init-method configured in spring context");
   }
 
   public void myDestroy() {
-    System.out.println("customerize destroy method is called  with destroy-method");
+    System.out.println("destroy-method configured in spring context");
+  }
+
+  @Override
+  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    System.out.println("ApplicationContextAware: setApplicationContex");
   }
 }
