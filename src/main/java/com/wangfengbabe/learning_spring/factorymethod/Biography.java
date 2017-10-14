@@ -5,33 +5,33 @@ package com.wangfengbabe.learning_spring.factorymethod;
  */
 public class Biography implements IBook {
 
-  private String name;
-  private double price;
+    private String name;
+    private double price;
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public double getPrice() {
-    return price;
-  }
+    public double getPrice() {
+        return price;
+    }
 
-  public void setPrice(double price) {
-    this.price = price;
-  }
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
-  public Biography() {
+    public Biography() {
 
-  }
+    }
 
-  public Biography(String name, double price) {
+    public Biography(String name, double price) {
 
-    this.name = name;
-    this.price = price;
-  }
+        this.name = name;
+        this.price = price;
+    }
 
 }

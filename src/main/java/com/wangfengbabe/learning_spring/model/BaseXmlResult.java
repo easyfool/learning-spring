@@ -5,24 +5,24 @@ package com.wangfengbabe.learning_spring.model;
  */
 public class BaseXmlResult {
 
-  protected String code;
+    protected String code;
 
-  protected String message;
+    protected String message;
 
-  public String getCode() {
-    return code;
-  }
+    public String getCode() {
+        return code;
+    }
 
-  public void setCode(String code) {
-    this.code = code;
-  }
+    public void setCode(String code) {
+        this.code = code;
+    }
 
-  public String getMessage() {
-    return message;
-  }
+    public String getMessage() {
+        return message;
+    }
 
-  public void setMessage(String message) {
-    this.message = message;
-  }
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
 }

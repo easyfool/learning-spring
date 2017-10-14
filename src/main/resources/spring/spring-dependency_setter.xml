@@ -2,10 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-  <bean id="wheel" class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Wheel">
+  <bean id="wheel"
+    class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Wheel">
     <property name="name" value="Bolon tyre"/>
   </bean>
-  <bean id="carWithSetterDependency" class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Car">
+  <bean id="carWithSetterDependency"
+    class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Car">
     <property name="name" value="Benz"/>
     <property name="years" value="30"/>
     <property name="wheels" ref="wheel"/>

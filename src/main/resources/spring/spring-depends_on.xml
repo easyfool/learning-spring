@@ -3,7 +3,8 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
   <!--depends on-->
-  <bean id="fish" class="com.wangfengbabe.learning_spring.depends_on.Fish" depends-on="water,food"/>
+  <bean id="fish" class="com.wangfengbabe.learning_spring.depends_on.Fish"
+    depends-on="water,food"/>
   <bean id="water" class="com.wangfengbabe.learning_spring.depends_on.Water"/>
   <bean id="food" class="com.wangfengbabe.learning_spring.depends_on.Food"/>
 </beans>

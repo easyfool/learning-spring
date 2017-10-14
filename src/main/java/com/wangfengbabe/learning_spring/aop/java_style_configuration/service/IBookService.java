@@ -5,6 +5,6 @@ package com.wangfengbabe.learning_spring.aop.java_style_configuration.service;
  */
 public interface IBookService {
 
-  public int getBookStoreByIsbn(String isbn);
+    public int getBookStoreByIsbn(String isbn);
 
 }

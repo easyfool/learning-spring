@@ -14,15 +14,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by wangfeng on 14/06/2017.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:spring/spring-instantiation_with_instance_factory_method.xml")
+@ContextConfiguration
+    ("classpath:spring/spring-instantiation_with_instance_factory_method.xml")
 public class LegendaryTest {
 
-  @Autowired
-  IBook legendary;
+    @Autowired IBook legendary;
 
-  @Test
-  public void testStaticFactoryMethod() {
-    assertThat(legendary, notNullValue());
-  }
+    @Test public void testStaticFactoryMethod() {
+        assertThat(legendary, notNullValue());
+    }
 
 }

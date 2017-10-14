@@ -5,8 +5,8 @@ package com.wangfengbabe.learning_spring.depends_on;
  */
 public class Fish {
 
-  public Fish() {
-    System.out.println("Fish constructor");
-  }
+    public Fish() {
+        System.out.println("Fish constructor");
+    }
 
 }

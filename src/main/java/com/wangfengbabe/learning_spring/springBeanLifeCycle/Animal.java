@@ -5,18 +5,18 @@ package com.wangfengbabe.learning_spring.springBeanLifeCycle;
  */
 public class Animal {
 
-  private String name;
+    private String name;
 
-  public Animal(String name) {
-    this.name = name;
-  }
+    public Animal(String name) {
+        this.name = name;
+    }
 
-  public Animal() {
-    System.out.println("constructor : Animal");
-  }
+    public Animal() {
+        System.out.println("constructor : Animal");
+    }
 
-  public void setName(String name) {
-    System.out.println("setter:[name] in Animal");
-    this.name = name;
-  }
+    public void setName(String name) {
+        System.out.println("setter:[name] in Animal");
+        this.name = name;
+    }
 }

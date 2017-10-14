@@ -1,4 +1,5 @@
-package com.wangfengbabe.learning_spring.aop.java_style_configuration.pointcut.api;
+package com.wangfengbabe.learning_spring.aop.java_style_configuration
+    .pointcut.api;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
@@ -11,11 +12,11 @@ import org.aopalliance.intercept.MethodInvocation;
 public class SimpleAdvice implements MethodInterceptor {
 
 
-  @Override
-  public Object invoke(MethodInvocation methodInvocation) throws Throwable {
-    System.out.println("before");
-    Object retVal = methodInvocation.proceed();
-    System.out.println("after");
-    return retVal;
-  }
+    @Override public Object invoke(MethodInvocation methodInvocation)
+        throws Throwable {
+        System.out.println("before");
+        Object retVal = methodInvocation.proceed();
+        System.out.println("after");
+        return retVal;
+    }
 }

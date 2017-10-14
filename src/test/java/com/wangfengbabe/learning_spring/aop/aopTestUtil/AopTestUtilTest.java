@@ -26,48 +26,40 @@ import org.springframework.test.util.ReflectionTestUtils;
 @ContextConfiguration("classpath:spring/spring-aopTestUtil.xml")
 public class AopTestUtilTest {
 
-  @Mock
-  Dep dep;
+    @Mock Dep dep;
 
-  @Autowired
-  private BarAspect barAspect;
+    @Autowired private BarAspect barAspect;
 
-  @Autowired
-  ApplicationContext applicationContext;
+    @Autowired ApplicationContext applicationContext;
 
-  @Autowired
-  @InjectMocks
-  IBar bar;
+    @Autowired @InjectMocks IBar bar;
 
-  @Before
-  public void setUp() {
-    MockitoAnnotations.initMocks(this);
+    @Before public void setUp() {
+        MockitoAnnotations.initMocks(this);
 
-    //对象默认返回aspect,修改为返回mock
-    when(dep.perform("aspect")).thenReturn("mock");
-  }
-
-  @Test
-  public void testDefault() {
-    String tRet = bar.perform("hello");
-    System.out.println(tRet);
-    //mock注入无效,仍然返回aspect
-    if ("!aspect".equals(tRet)) {
-      Assert.fail("perform return not equeal aspect");
+        // 对象默认返回aspect,修改为返回mock
+        when(dep.perform("aspect")).thenReturn("mock");
     }
-  }
 
-  @Test
-  public void testAopUtils() {
-    //获取真实的代理对象
-    Bar tBar = AopTestUtils.getTargetObject(bar);
-    ReflectionTestUtils.setField(tBar, "dep", dep);
-
-    String tRet = bar.perform("hello");
-
-    //此时才真正mock到
-    if (!"mock".equals(tRet)) {
-      Assert.fail("perform return not equeal mock");
+    @Test public void testDefault() {
+        String tRet = bar.perform("hello");
+        System.out.println(tRet);
+        // mock注入无效,仍然返回aspect
+        if ("!aspect".equals(tRet)) {
+            Assert.fail("perform return not equeal aspect");
+        }
     }
-  }
+
+    @Test public void testAopUtils() {
+        // 获取真实的代理对象
+        Bar tBar = AopTestUtils.getTargetObject(bar);
+        ReflectionTestUtils.setField(tBar, "dep", dep);
+
+        String tRet = bar.perform("hello");
+
+        // 此时才真正mock到
+        if (!"mock".equals(tRet)) {
+            Assert.fail("perform return not equeal mock");
+        }
+    }
 }

@@ -5,7 +5,7 @@ package com.wangfengbabe.learning_spring.depends_on;
  */
 public class Food {
 
-  public Food() {
-    System.out.println("Food constructor");
-  }
+    public Food() {
+        System.out.println("Food constructor");
+    }
 }

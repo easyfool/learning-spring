@@ -9,15 +9,17 @@ import org.springframework.stereotype.Component;
 /**
  * Created by wangfeng on 27/06/2017.
  */
-@Component
-@Aspect
+@Component @Aspect
+
 public class AfterReturningExample {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(AfterReturningExample.class);
+    private static final Logger LOGGER =
+        LoggerFactory.getLogger(AfterReturningExample.class);
 
-  @AfterReturning("this(com.wangfengbabe.learning_spring.aop.java_style_configuration.service.IPerform)")
-  public void afterAnyway() {
-    LOGGER.info("applause after performace");
-  }
+    @AfterReturning(
+        "this(com.wangfengbabe.learning_spring.aop.java_style_configuration"
+            + ".service.IPerform)") public void afterAnyway() {
+        LOGGER.info("applause after performace");
+    }
 
 }

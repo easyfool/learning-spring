@@ -1,6 +1,7 @@
 package com.wangfengbabe.learning_spring.aop.java_style_configuration.advice;
 
-import com.wangfengbabe.learning_spring.aop.java_style_configuration.service.IPerform;
+import com.wangfengbabe.learning_spring.aop.java_style_configuration.service
+    .IPerform;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,17 +12,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Created by wangfeng on 28/06/2017.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {com.wangfengbabe.learning_spring.aop.java_style_configuration.AppConfig.class})
+@RunWith(SpringJUnit4ClassRunner.class) @ContextConfiguration(classes = {
+    com.wangfengbabe.learning_spring.aop.java_style_configuration.AppConfig
+        .class})
 public class BeforeAdviceExampleTest {
 
-  @Autowired
-  @Qualifier("sing")
-  private IPerform perform;
+    @Autowired @Qualifier("sing") private IPerform perform;
 
-  @Test
-  public void testApplauseBeforePerformance() throws Exception {
-    perform.perform(1);
-  }
+    @Test public void testApplauseBeforePerformance() throws Exception {
+        perform.perform(1);
+    }
 
 }

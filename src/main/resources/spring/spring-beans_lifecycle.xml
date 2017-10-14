@@ -3,17 +3,20 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  <bean id="myBeanPostProcessor" class="com.wangfengbabe.learning_spring.springBeanLifeCycle.MyBeanPostProcessor"/>
+  <bean id="myBeanPostProcessor"
+    class="com.wangfengbabe.learning_spring.springBeanLifeCycle.MyBeanPostProcessor"/>
   <bean id="myBeanFactoryPostProcessor"
     class="com.wangfengbabe.learning_spring.springBeanLifeCycle.MyBeanFactotyPostProcessor"/>
   <bean id="myInitiationAwareBeanPostProcessor"
     class="com.wangfengbabe.learning_spring.springBeanLifeCycle.MyInstantiationAwareBeanPostProcessor"/>
-  <bean id="person" class="com.wangfengbabe.learning_spring.springBeanLifeCycle.Person">
+  <bean id="person"
+    class="com.wangfengbabe.learning_spring.springBeanLifeCycle.Person">
     <property name="name" value="wangfeng"/>
     <property name="address" value="shandong"/>
     <property name="phone" value="123"/>
   </bean>
-  <bean id="animal" class="com.wangfengbabe.learning_spring.springBeanLifeCycle.Animal">
+  <bean id="animal"
+    class="com.wangfengbabe.learning_spring.springBeanLifeCycle.Animal">
     <property name="name" value="sheep"/>
   </bean>
 </beans>

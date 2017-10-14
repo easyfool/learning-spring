@@ -13,14 +13,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class ClientServiceTest {
 
-  @Test
-  public void testFactoryMethod() {
-    ApplicationContext context = new ClassPathXmlApplicationContext(
-        "classpath:spring/spring-instantiation_with_instance_factory_method.xml");
-    ClientService clientService = (ClientService) context.getBean("clientService");
-    assertNotNull(clientService);
-    AccountService accountService = (AccountService) context.getBean("accountService");
-    assertNotNull(accountService);
-  }
+    @Test public void testFactoryMethod() {
+        ApplicationContext context = new ClassPathXmlApplicationContext(
+            "classpath:spring/spring"
+                + "-instantiation_with_instance_factory_method.xml");
+        ClientService clientService =
+            (ClientService) context.getBean("clientService");
+        assertNotNull(clientService);
+        AccountService accountService =
+            (AccountService) context.getBean("accountService");
+        assertNotNull(accountService);
+    }
 
 }

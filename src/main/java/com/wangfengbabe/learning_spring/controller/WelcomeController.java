@@ -10,17 +10,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Created by wangfeng on 23/02/2017.
  */
-@Controller
-public class WelcomeController {
+@Controller public class WelcomeController {
 
-  private final static Logger LOGGER = LoggerFactory.getLogger(
-      WelcomeController.class);
+    private final static Logger LOGGER =
+        LoggerFactory.getLogger(WelcomeController.class);
 
-  @RequestMapping(value = "/welcome", method = RequestMethod.GET)
-  public String welcome(Model model) {
-    LOGGER.debug("welcome() is executed,value{}", "wangfeng");
-    LOGGER.error("this is error message", new Exception("testing"));
-    model.addAttribute("msg", "hello spring mvc logback");
-    return "welcome";
-  }
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+    public String welcome(Model model) {
+        LOGGER.debug("welcome() is executed,value{}", "wangfeng");
+        LOGGER.error("this is error message", new Exception("testing"));
+        model.addAttribute("msg", "hello spring mvc logback");
+        return "welcome";
+    }
 }

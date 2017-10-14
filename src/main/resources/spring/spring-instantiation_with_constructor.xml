@@ -3,7 +3,8 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
   <!--constructor dependency-->
-  <bean id="wheel" class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Wheel">
+  <bean id="wheel"
+    class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Wheel">
     <constructor-arg value="Bolon tyre"/>
   </bean>
 
@@ -18,7 +19,9 @@
     class="com.wangfengbabe.learning_spring.instantiation.withConstructor.Car">
     <constructor-arg type="int" value="30 "/>
     <constructor-arg type="java.lang.String" value="Benz"/>
-    <constructor-arg type="com.wangfengbabe.learning_spring.instantiation.withConstructor.Wheel" ref="wheel"/>
+    <constructor-arg
+      type="com.wangfengbabe.learning_spring.instantiation.withConstructor.Wheel"
+      ref="wheel"/>
   </bean>
 
   <bean id="exampleBean_constructorDependency_with_index"

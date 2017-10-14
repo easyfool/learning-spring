@@ -3,7 +3,8 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  
+
   <!--lazy initialize-->
-  <bean id="lazy" class="com.wangfengbabe.learning_spring.lazy_initialize.Lazy" lazy-init="true"/>
+  <bean id="lazy" class="com.wangfengbabe.learning_spring.lazy_initialize.Lazy"
+    lazy-init="true"/>
 </beans>
