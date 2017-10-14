@@ -10,8 +10,7 @@ import org.aspectj.lang.annotation.Before;
 @Aspect
 public class BarAspect {
 
-  @Before("execution(* com.wangfengbabe.learning_spring.aop.aopTestUtil.Bar"
-      + ".perform(..))")
+  @Before("execution(* com.wangfengbabe.learning_spring.aop.aopTestUtil.Bar" + ".perform(..))")
   public void beforeSayHello(JoinPoint joinPoint) {
     System.out.println("aspect before " + joinPoint.getArgs()[0]);
   }

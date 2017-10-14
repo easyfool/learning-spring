@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class WelcomeController {
 
-  private final static Logger LOGGER = LoggerFactory
-      .getLogger(WelcomeController.class);
+  private final static Logger LOGGER = LoggerFactory.getLogger(WelcomeController.class);
 
   @RequestMapping(value = "/welcome", method = RequestMethod.GET)
   public String welcome(Model model) {

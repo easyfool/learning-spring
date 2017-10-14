@@ -14,12 +14,10 @@ import org.springframework.stereotype.Component;
 
 public class AfterReturningExample {
 
-  private static final Logger LOGGER = LoggerFactory
-      .getLogger(AfterReturningExample.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(AfterReturningExample.class);
 
-  @AfterReturning(
-      "this(com.wangfengbabe.learning_spring.aop.java_style_configuration"
-          + ".service.IPerform)")
+  @AfterReturning("this(com.wangfengbabe.learning_spring.aop.java_style_configuration"
+      + ".service.IPerform)")
   public void afterAnyway() {
     LOGGER.info("applause after performace");
   }

@@ -13,8 +13,7 @@ public class SystemArchitecture {
 
   // TODO how to pointcut protected and private method
   @Pointcut("execution(public * *(..))")
-  public void anyPublicOperation() {
-  }
+  public void anyPublicOperation() {}
 
   // the execution of any method with a name beginning with "set":
   @Pointcut(value = "execution(* set*(..))")
@@ -44,8 +43,7 @@ public class SystemArchitecture {
 
   }
 
-  @Pointcut("within(com.wangfengbabe.learning_spring.aop"
-      + ".java_style_configuration.service.*)")
+  @Pointcut("within(com.wangfengbabe.learning_spring.aop" + ".java_style_configuration.service.*)")
   public void anyOperationWithServicePackage() {
 
   }

@@ -1,5 +1,4 @@
-package com.wangfengbabe.learning_spring.aop.java_style_configuration
-    .pointcut.api;
+package com.wangfengbabe.learning_spring.aop.java_style_configuration.pointcut.api;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;

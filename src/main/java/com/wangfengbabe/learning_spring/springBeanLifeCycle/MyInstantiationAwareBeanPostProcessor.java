@@ -3,14 +3,13 @@ package com.wangfengbabe.learning_spring.springBeanLifeCycle;
 import java.beans.PropertyDescriptor;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyValues;
-import org.springframework.beans.factory.config
-    .InstantiationAwareBeanPostProcessorAdapter;
+import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessorAdapter;
 
 /**
  * Created by wangfeng on 18/06/2017.
  */
-public class MyInstantiationAwareBeanPostProcessor extends
-    InstantiationAwareBeanPostProcessorAdapter {
+public class MyInstantiationAwareBeanPostProcessor
+    extends InstantiationAwareBeanPostProcessorAdapter {
 
   public MyInstantiationAwareBeanPostProcessor() {
     // super();
@@ -18,8 +17,7 @@ public class MyInstantiationAwareBeanPostProcessor extends
     // InstantiationAwareBeanPostProcessorAdapter");
   }
 
-  public Object postProcessBeforeInstantiation(Class beanClass,
-      String beanName) {
+  public Object postProcessBeforeInstantiation(Class beanClass, String beanName) {
     // System.out.println("postProcessBeforeInstantiation method is
     // called in
     // InstantiationAwareBeanPostProcessor");
@@ -32,9 +30,8 @@ public class MyInstantiationAwareBeanPostProcessor extends
     return bean;
   }
 
-  public PropertyValues postProcessPropertyValues(PropertyValues pvs,
-      PropertyDescriptor[] pds, Object bean,
-      String beanName) throws BeansException {
+  public PropertyValues postProcessPropertyValues(PropertyValues pvs, PropertyDescriptor[] pds,
+      Object bean, String beanName) throws BeansException {
     // System.out.println("postProcessPropertyValues is called");
     return pvs;
   }

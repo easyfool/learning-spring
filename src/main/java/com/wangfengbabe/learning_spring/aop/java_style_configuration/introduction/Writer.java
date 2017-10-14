@@ -1,5 +1,4 @@
-package com.wangfengbabe.learning_spring.aop.java_style_configuration
-    .introduction;
+package com.wangfengbabe.learning_spring.aop.java_style_configuration.introduction;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -12,8 +12,7 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * Created by wangfeng on 18/06/2017.
  */
-public class Person
-    implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,
+public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,
     InitializingBean, DisposableBean {
 
   private String name;
@@ -29,9 +28,8 @@ public class Person
 
   @Override
   public String toString() {
-    return "Person{" + "name='" + name + '\'' + ", address='" + address + '\''
-        + ", phone=" + phone + ", beanFactory="
-        + beanFactory + ", beanName='" + beanName + '\'' + '}';
+    return "Person{" + "name='" + name + '\'' + ", address='" + address + '\'' + ", phone=" + phone
+        + ", beanFactory=" + beanFactory + ", beanName='" + beanName + '\'' + '}';
   }
 
   public String getName() {
@@ -101,8 +99,7 @@ public class Person
   }
 
   @Override
-  public void setApplicationContext(ApplicationContext applicationContext)
-      throws BeansException {
+  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
     System.out.println("ApplicationContextAware: setApplicationContex");
   }
 }

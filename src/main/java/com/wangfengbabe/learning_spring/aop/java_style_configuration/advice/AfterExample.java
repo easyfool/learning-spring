@@ -14,8 +14,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class AfterExample {
 
-  private static final Logger LOGGER = LoggerFactory
-      .getLogger(AfterExample.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(AfterExample.class);
 
   @After("this(com.wangfengbabe.learning_spring.aop"
       + ".java_style_configuration.service.IPerform)")

@@ -1,7 +1,6 @@
 package com.wangfengbabe.learning_spring;
 
 import static org.junit.Assert.assertNotNull;
-
 import com.wangfengbabe.learning_spring.factorymethod.AccountService;
 import com.wangfengbabe.learning_spring.factorymethod.ClientService;
 import org.junit.Test;
@@ -16,13 +15,10 @@ public class ClientServiceTest {
   @Test
   public void testFactoryMethod() {
     ApplicationContext context = new ClassPathXmlApplicationContext(
-        "classpath:spring/spring"
-            + "-instantiation_with_instance_factory_method.xml");
-    ClientService clientService = (ClientService) context
-        .getBean("clientService");
+        "classpath:spring/spring" + "-instantiation_with_instance_factory_method.xml");
+    ClientService clientService = (ClientService) context.getBean("clientService");
     assertNotNull(clientService);
-    AccountService accountService = (AccountService) context
-        .getBean("accountService");
+    AccountService accountService = (AccountService) context.getBean("accountService");
     assertNotNull(accountService);
   }
 

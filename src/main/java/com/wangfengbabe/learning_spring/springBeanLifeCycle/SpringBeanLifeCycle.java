@@ -10,13 +10,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class SpringBeanLifeCycle {
 
-  private static final Logger LOGGER = LoggerFactory
-      .getLogger(SpringBeanLifeCycle.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(SpringBeanLifeCycle.class);
 
   public static void main(String[] args) {
     System.out.println("initialize context container");
-    ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
-        "classpath:spring/spring-beans_lifecycle.xml");
+    ConfigurableApplicationContext context =
+        new ClassPathXmlApplicationContext("classpath:spring/spring-beans_lifecycle.xml");
     Animal animal = (Animal) context.getBean("animal");
 
     Person person = (Person) context.getBean("person");

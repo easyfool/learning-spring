@@ -40,8 +40,7 @@ public class MyAspect {
   }
 
   @Before("com.wangfengbabe.learning_spring.aop.java_style_configuration"
-      + ".pointcut.SystemArchitecture"
-      + ".anyOperationDefinedInserviceOrSubPackage()")
+      + ".pointcut.SystemArchitecture" + ".anyOperationDefinedInserviceOrSubPackage()")
   public void loggerBeforeAnyOperationInServiceOrSubPackage() {
     LOGGER.info("logger before any operation in service or sub package");
   }

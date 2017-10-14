@@ -3,15 +3,10 @@ package com.wangfengbabe.learning_spring.aop.java_style_configuration.pointcut;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
-
-import com.wangfengbabe.learning_spring.aop.java_style_configuration.model
-    .Account;
-import com.wangfengbabe.learning_spring.aop.java_style_configuration.service
-    .IAccountService;
-import com.wangfengbabe.learning_spring.aop.java_style_configuration.service
-    .IBookService;
-import com.wangfengbabe.learning_spring.aop.java_style_configuration.service
-    .impl.DeprecatedAccountServiceImpl;
+import com.wangfengbabe.learning_spring.aop.java_style_configuration.model.Account;
+import com.wangfengbabe.learning_spring.aop.java_style_configuration.service.IAccountService;
+import com.wangfengbabe.learning_spring.aop.java_style_configuration.service.IBookService;
+import com.wangfengbabe.learning_spring.aop.java_style_configuration.service.impl.DeprecatedAccountServiceImpl;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
@@ -24,9 +19,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by wangfeng on 27/06/2017.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {
-    com.wangfengbabe.learning_spring.aop.java_style_configuration.AppConfig
-        .class})
+@ContextConfiguration(
+    classes = {com.wangfengbabe.learning_spring.aop.java_style_configuration.AppConfig.class})
 public class SystemArchitectureTest {
 
   @Rule
@@ -47,8 +41,7 @@ public class SystemArchitectureTest {
   @Test
   public void testAnyPublicOperation() {
     account.deposite(10.0);// this will output twice including test method
-    assertThat(systemOutRule.getLog(),
-        containsString("logger before any public Opration"));
+    assertThat(systemOutRule.getLog(), containsString("logger before any public Opration"));
   }
 
   @Test
@@ -83,8 +76,8 @@ public class SystemArchitectureTest {
   @Test
   public void testAnyOperationInServiceOrSubPackage() {
     deprecatedAccountService.print();
-    assertThat(systemOutRule.getLog(), containsString(
-        "logger before any operation in service or sub package"));
+    assertThat(systemOutRule.getLog(),
+        containsString("logger before any operation in service or sub package"));
     assertThat(systemOutRule.getLog(),
         not(containsString("logger before any operation in service package")));
 

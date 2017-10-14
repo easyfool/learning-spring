@@ -1,5 +1,4 @@
-package com.wangfengbabe.learning_spring.aop.java_style_configuration.service
-    .impl;
+package com.wangfengbabe.learning_spring.aop.java_style_configuration.service.impl;
 
 import org.springframework.stereotype.Component;
 

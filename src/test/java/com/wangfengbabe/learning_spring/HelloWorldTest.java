@@ -3,7 +3,6 @@ package com.wangfengbabe.learning_spring;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
@@ -17,7 +16,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  *
  * @author wangfeng
  * @version 1.0
- * @since <pre>
+ * @since
+ * 
+ *        <pre>
  *        04 / 16 / 2017
  *        </pre>
  */

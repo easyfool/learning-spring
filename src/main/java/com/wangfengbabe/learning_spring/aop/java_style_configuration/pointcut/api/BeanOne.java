@@ -1,5 +1,4 @@
-package com.wangfengbabe.learning_spring.aop.java_style_configuration
-    .pointcut.api;
+package com.wangfengbabe.learning_spring.aop.java_style_configuration.pointcut.api;
 
 /**
  * Created by wangfeng on 28/06/2017.

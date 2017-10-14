@@ -1,5 +1,4 @@
-package com.wangfengbabe.learning_spring.aop.java_style_configuration
-    .pointcut.api;
+package com.wangfengbabe.learning_spring.aop.java_style_configuration.pointcut.api;
 
 import java.lang.reflect.Method;
 import org.springframework.aop.ClassFilter;

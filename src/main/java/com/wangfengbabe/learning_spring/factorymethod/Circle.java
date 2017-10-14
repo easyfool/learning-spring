@@ -8,8 +8,7 @@ public class Circle implements IShape {
   private double radius;
   private Point center;
 
-  public Circle() {
-  }
+  public Circle() {}
 
   public double getRadius() {
 

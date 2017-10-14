@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class XMLController {
 
   @RequestMapping(value = "{name}", method = RequestMethod.GET)
-  public @ResponseBody
-  Coffee getCoffeeInXML(@PathVariable String name) {
+  public @ResponseBody Coffee getCoffeeInXML(@PathVariable String name) {
     Coffee coffee = new Coffee(name, 100);
     return coffee;
   }

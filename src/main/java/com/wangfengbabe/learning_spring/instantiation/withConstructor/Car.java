@@ -13,8 +13,7 @@ public class Car {
     return years;
   }
 
-  public Car() {
-  }
+  public Car() {}
 
   public String getName() {
     return name;

@@ -16,8 +16,8 @@ public class MyBeanFactotyPostProcessor implements BeanFactoryPostProcessor {
   }
 
   @Override
-  public void postProcessBeanFactory(
-      ConfigurableListableBeanFactory beanFactory) throws BeansException {
+  public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory)
+      throws BeansException {
     // System.out.println("postProcessBeanFactory method is called in
     // concrete
     // BeanFactoryPostProcessor");

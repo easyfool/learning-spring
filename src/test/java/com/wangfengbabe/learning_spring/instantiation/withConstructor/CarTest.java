@@ -4,7 +4,6 @@ import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by wangfeng on 17/06/2017.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({
-    "classpath:spring/spring-instantiation_with_constructor.xml",
+@ContextConfiguration({"classpath:spring/spring-instantiation_with_constructor.xml",
     "classpath:spring/spring-dependency_setter.xml"})
 public class CarTest {
 
@@ -51,8 +49,7 @@ public class CarTest {
   public void testEveryConstructorShouldReturnEqualObject() {
     assertEquals(constructorType, carWithSetterDependency);
     assertThat(constructorIndex,
-        allOf(equalTo(constructorType), equalTo(constructorName),
-            equalTo(constructorDefault)));
+        allOf(equalTo(constructorType), equalTo(constructorName), equalTo(constructorDefault)));
   }
 
 }

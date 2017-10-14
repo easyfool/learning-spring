@@ -10,11 +10,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class App {
 
   public static void main(String[] args) {
-    ApplicationContext context = new ClassPathXmlApplicationContext(
-        "classpath:spring/spring-database.xml");
+    ApplicationContext context =
+        new ClassPathXmlApplicationContext("classpath:spring/spring-database.xml");
     JdbcTemplate jdbcTemplate = (JdbcTemplate) context.getBean("jdbcTemplate");
-    int count = jdbcTemplate
-        .queryForObject("select count(*) from customer", Integer.class);
+    int count = jdbcTemplate.queryForObject("select count(*) from customer", Integer.class);
     System.out.println(count);
 
   }

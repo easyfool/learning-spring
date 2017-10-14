@@ -1,7 +1,6 @@
 package com.wangfengbabe.learning_spring.aop.aopTestUtil;
 
 import static org.mockito.Mockito.when;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

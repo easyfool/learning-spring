@@ -14,8 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class XmlActionResult<T> extends BaseXmlResult {
 
   @XmlElements({@XmlElement(name = "Person", type = Person.class),
-      @XmlElement(name = "Man", type = Man.class),
-      @XmlElement(name = "Woman", type = Woman.class)})
+      @XmlElement(name = "Man", type = Man.class), @XmlElement(name = "Woman", type = Woman.class)})
   private T data;
 
   public String getCode() {

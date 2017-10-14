@@ -45,8 +45,7 @@ public class Spittle {
     if (id != null ? !id.equals(spittle.id) : spittle.id != null) {
       return false;
     }
-    if (message != null ? !message.equals(spittle.message)
-        : spittle.message != null) {
+    if (message != null ? !message.equals(spittle.message) : spittle.message != null) {
       return false;
     }
     return time != null ? time.equals(spittle.time) : spittle.time == null;
