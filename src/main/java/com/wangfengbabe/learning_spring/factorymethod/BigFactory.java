@@ -5,15 +5,15 @@ package com.wangfengbabe.learning_spring.factorymethod;
  */
 public class BigFactory {
 
-    private static IBook biography = new Biography();
-    private static IShape circle = new Circle();
+  private static IBook biography = new Biography();
+  private static IShape circle = new Circle();
 
-    public IBook createBiography() {
-        return biography;
-    }
+  public IBook createBiography() {
+    return biography;
+  }
 
-    public IShape createCircle() {
-        return circle;
-    }
+  public IShape createCircle() {
+    return circle;
+  }
 
 }

@@ -5,6 +5,6 @@ package com.wangfengbabe.learning_spring.aop.aopTestUtil;
  */
 public interface IBar {
 
-    public String perform(String message);
+  public String perform(String message);
 
 }

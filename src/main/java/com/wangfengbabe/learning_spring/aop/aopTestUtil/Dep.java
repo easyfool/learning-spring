@@ -5,9 +5,9 @@ package com.wangfengbabe.learning_spring.aop.aopTestUtil;
  */
 public class Dep {
 
-    public String perform(String message) {
-        return message;
+  public String perform(String message) {
+    return message;
 
-    }
+  }
 
 }

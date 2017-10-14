@@ -26,19 +26,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration("classpath:spring/spring-helloWorld.xml")
 public class HelloWorldTest {
 
-    @Rule public final SystemOutRule systemOutRule =
-        new SystemOutRule().enableLog();
+  @Rule
+  public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
-    @Autowired HelloWorld helloWorld;
+  @Autowired
+  HelloWorld helloWorld;
 
-    @Test public void testInjectedBeanShouldNotBeNull() {
-        assertThat(helloWorld, notNullValue());
-    }
+  @Test
+  public void testInjectedBeanShouldNotBeNull() {
+    assertThat(helloWorld, notNullValue());
+  }
 
-
-    @Test public void testMessageShouldBeCorrect() throws Exception {
-        assertThat(helloWorld.getMessage(), equalTo("hello world"));
-    }
-
+  @Test
+  public void testMessageShouldBeCorrect() throws Exception {
+    assertThat(helloWorld.getMessage(), equalTo("hello world"));
+  }
 
 }

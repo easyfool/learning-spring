@@ -5,5 +5,4 @@ package com.wangfengbabe.learning_spring.factorymethod;
  */
 public class ClientServiceImpl implements ClientService {
 
-
 }

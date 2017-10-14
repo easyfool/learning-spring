@@ -5,32 +5,32 @@ package com.wangfengbabe.learning_spring.factorymethod;
  */
 public class Circle implements IShape {
 
-    private double radius;
-    private Point center;
+  private double radius;
+  private Point center;
 
-    public Circle() {
-    }
+  public Circle() {
+  }
 
-    public double getRadius() {
+  public double getRadius() {
 
-        return radius;
-    }
+    return radius;
+  }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
+  public void setRadius(double radius) {
+    this.radius = radius;
+  }
 
-    public Point getCenter() {
-        return center;
-    }
+  public Point getCenter() {
+    return center;
+  }
 
-    public void setCenter(Point center) {
-        this.center = center;
-    }
+  public void setCenter(Point center) {
+    this.center = center;
+  }
 
-    public Circle(double radius, Point center) {
+  public Circle(double radius, Point center) {
 
-        this.radius = radius;
-        this.center = center;
-    }
+    this.radius = radius;
+    this.center = center;
+  }
 }

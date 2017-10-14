@@ -8,9 +8,11 @@ import org.springframework.stereotype.Component;
 /**
  * Created by wangfeng on 14/06/2017.
  */
-@Component public class SpittleServiceImpl implements ISpittleService {
+@Component
+public class SpittleServiceImpl implements ISpittleService {
 
-    @Override public List<Spittle> findSpittles(long max, int count) {
-        return null;
-    }
+  @Override
+  public List<Spittle> findSpittles(long max, int count) {
+    return null;
+  }
 }

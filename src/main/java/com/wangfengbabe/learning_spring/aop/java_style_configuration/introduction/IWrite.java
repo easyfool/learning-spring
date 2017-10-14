@@ -6,5 +6,5 @@ package com.wangfengbabe.learning_spring.aop.java_style_configuration
  */
 public interface IWrite {
 
-    public void write();
+  public void write();
 }

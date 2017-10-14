@@ -5,19 +5,19 @@ package com.wangfengbabe.learning_spring.factorymethod;
  */
 public class DefaultServiceLocator {
 
-    private static ClientService clientService = new ClientServiceImpl();
-    private static AccountService accountService = new AccountServiceImpl();
+  private static ClientService clientService = new ClientServiceImpl();
+  private static AccountService accountService = new AccountServiceImpl();
 
-    public DefaultServiceLocator() {
+  public DefaultServiceLocator() {
 
-    }
+  }
 
-    public ClientService createClientService() {
-        return clientService;
-    }
+  public ClientService createClientService() {
+    return clientService;
+  }
 
-    public AccountService createAccountService() {
-        return accountService;
-    }
+  public AccountService createAccountService() {
+    return accountService;
+  }
 
 }

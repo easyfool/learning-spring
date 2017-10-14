@@ -21,16 +21,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
     ("classpath:spring/spring-instantiation_with_instance_factory_method.xml")
 public class BigFactoryTest {
 
-    @Autowired @Qualifier("biography") private IBook biography1;
+  @Autowired
+  @Qualifier("biography")
+  private IBook biography1;
 
-    @Autowired private IShape circle;
+  @Autowired
+  private IShape circle;
 
+  @Test
+  public void createBiography() throws Exception {
+    assertThat(biography1, IsInstanceOf.instanceOf(Biography.class));
+  }
 
-    @Test public void createBiography() throws Exception {
-        assertThat(biography1, IsInstanceOf.instanceOf(Biography.class));
-    }
-
-    @Test public void createCircle() throws Exception {
-    }
+  @Test
+  public void createCircle() throws Exception {
+  }
 
 }

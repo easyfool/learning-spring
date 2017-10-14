@@ -12,15 +12,19 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Created by wangfeng on 28/06/2017.
  */
-@RunWith(SpringJUnit4ClassRunner.class) @ContextConfiguration(classes = {
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {
     com.wangfengbabe.learning_spring.aop.java_style_configuration.AppConfig
         .class})
 public class AroundExampleTest {
 
-    @Autowired @Qualifier("sing") private IPerform perform;
+  @Autowired
+  @Qualifier("sing")
+  private IPerform perform;
 
-    @Test public void applauseBeforePerformance() throws Exception {
-        perform.perform(1);
-    }
+  @Test
+  public void applauseBeforePerformance() throws Exception {
+    perform.perform(1);
+  }
 
 }

@@ -8,11 +8,13 @@ import org.springframework.stereotype.Component;
 /**
  * Created by wangfeng on 28/06/2017.
  */
-@Component("writer") public class Writer implements IWrite {
+@Component("writer")
+public class Writer implements IWrite {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Writer.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(Writer.class);
 
-    @Override public void write() {
-        LOGGER.info("writing a poem");
-    }
+  @Override
+  public void write() {
+    LOGGER.info("writing a poem");
+  }
 }

@@ -8,6 +8,6 @@ import com.wangfengbabe.learning_spring.aop.java_style_configuration.model
  */
 public interface IAccountService {
 
-    public void transfer(Account from, Account to, double amount);
+  public void transfer(Account from, Account to, double amount);
 
 }

@@ -8,7 +8,6 @@ import java.util.List;
  */
 public interface ISpittleService {
 
-    List<Spittle> findSpittles(long max, int count);
-
+  List<Spittle> findSpittles(long max, int count);
 
 }

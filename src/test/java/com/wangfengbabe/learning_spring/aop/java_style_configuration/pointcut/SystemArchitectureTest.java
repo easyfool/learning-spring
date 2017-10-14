@@ -23,66 +23,76 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Created by wangfeng on 27/06/2017.
  */
-@RunWith(SpringJUnit4ClassRunner.class) @ContextConfiguration(classes = {
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {
     com.wangfengbabe.learning_spring.aop.java_style_configuration.AppConfig
         .class})
 public class SystemArchitectureTest {
 
-    @Rule public final SystemOutRule systemOutRule =
-        new SystemOutRule().enableLog();
+  @Rule
+  public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
-    @Autowired private Account account;
+  @Autowired
+  private Account account;
 
-    @Autowired private IAccountService accountService;
+  @Autowired
+  private IAccountService accountService;
 
-    @Autowired private DeprecatedAccountServiceImpl deprecatedAccountService;
+  @Autowired
+  private DeprecatedAccountServiceImpl deprecatedAccountService;
 
-    @Autowired IBookService bookService;
+  @Autowired
+  IBookService bookService;
 
-    @Test public void testAnyPublicOperation() {
-        account.deposite(10.0);// this will output twice including test method
-        assertThat(systemOutRule.getLog(),
-            containsString("logger before any public Opration"));
-    }
+  @Test
+  public void testAnyPublicOperation() {
+    account.deposite(10.0);// this will output twice including test method
+    assertThat(systemOutRule.getLog(),
+        containsString("logger before any public Opration"));
+  }
 
-    @Test public void testAnyOperationStartsWithSet() {
-        account.setBalance(100.0);
-        assertThat(systemOutRule.getLog(), not(containsString(
-            "logger before any operation in service package")));
-        assertThat(systemOutRule.getLog(),
-            containsString("logger before any Opration starts with set"));
-    }
+  @Test
+  public void testAnyOperationStartsWithSet() {
+    account.setBalance(100.0);
+    assertThat(systemOutRule.getLog(),
+        not(containsString("logger before any operation in service package")));
+    assertThat(systemOutRule.getLog(),
+        containsString("logger before any Opration starts with set"));
+  }
 
-    @Test public void testAnyOperationInAccountServiceShouldOutputProper() {
-        accountService.transfer(new Account(), new Account(), 20.0);
-        assertThat(systemOutRule.getLog(),
-            containsString("logger before any operation for IAccountService"));
-        assertThat(systemOutRule.getLog(),
-            containsString("logger before any operation in service package"));
+  @Test
+  public void testAnyOperationInAccountServiceShouldOutputProper() {
+    accountService.transfer(new Account(), new Account(), 20.0);
+    assertThat(systemOutRule.getLog(),
+        containsString("logger before any operation for IAccountService"));
+    assertThat(systemOutRule.getLog(),
+        containsString("logger before any operation in service package"));
 
-    }
+  }
 
-    @Test
-    public void testAnyOperationNotInAccountServiceShouldNotOutputProper() {
-        String isbn = "123456";
-        bookService.getBookStoreByIsbn(isbn);
-        assertThat(systemOutRule.getLog(), not(containsString(
-            "logger before any operation for IAccountService")));
-        assertThat(systemOutRule.getLog(),
-            containsString("logger before any operation in service package"));
-    }
+  @Test
+  public void testAnyOperationNotInAccountServiceShouldNotOutputProper() {
+    String isbn = "123456";
+    bookService.getBookStoreByIsbn(isbn);
+    assertThat(systemOutRule.getLog(),
+        not(containsString("logger before any operation for IAccountService")));
+    assertThat(systemOutRule.getLog(),
+        containsString("logger before any operation in service package"));
+  }
 
-    @Test public void testAnyOperationInServiceOrSubPackage() {
-        deprecatedAccountService.print();
-        assertThat(systemOutRule.getLog(), containsString(
-            "logger before any operation in service or sub package"));
-        assertThat(systemOutRule.getLog(), not(containsString(
-            "logger before any operation in service package")));
+  @Test
+  public void testAnyOperationInServiceOrSubPackage() {
+    deprecatedAccountService.print();
+    assertThat(systemOutRule.getLog(), containsString(
+        "logger before any operation in service or sub package"));
+    assertThat(systemOutRule.getLog(),
+        not(containsString("logger before any operation in service package")));
 
-    }
+  }
 
-    @Test public void testAnyOperationWithinPackage() {
-        bookService.getBookStoreByIsbn("");
-    }
+  @Test
+  public void testAnyOperationWithinPackage() {
+    bookService.getBookStoreByIsbn("");
+  }
 
 }

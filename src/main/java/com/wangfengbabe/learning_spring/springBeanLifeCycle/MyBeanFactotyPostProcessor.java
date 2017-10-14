@@ -9,18 +9,19 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
  */
 public class MyBeanFactotyPostProcessor implements BeanFactoryPostProcessor {
 
-    public MyBeanFactotyPostProcessor() {
-        // super();
-        // System.out.println("This is constructor of concrete
-        // BeanFactoryPostProcessor");
-    }
+  public MyBeanFactotyPostProcessor() {
+    // super();
+    // System.out.println("This is constructor of concrete
+    // BeanFactoryPostProcessor");
+  }
 
-    @Override public void postProcessBeanFactory(
-        ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        // System.out.println("postProcessBeanFactory method is called in
-        // concrete
-        // BeanFactoryPostProcessor");
-        // BeanDefinition bdf = beanFactory.getBeanDefinition("person");
-        // bdf.getPropertyValues().addPropertyValue("phone", "110");
-    }
+  @Override
+  public void postProcessBeanFactory(
+      ConfigurableListableBeanFactory beanFactory) throws BeansException {
+    // System.out.println("postProcessBeanFactory method is called in
+    // concrete
+    // BeanFactoryPostProcessor");
+    // BeanDefinition bdf = beanFactory.getBeanDefinition("person");
+    // bdf.getPropertyValues().addPropertyValue("phone", "110");
+  }
 }

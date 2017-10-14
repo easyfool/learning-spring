@@ -9,13 +9,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class AliasTest {
 
-    @Test public void testAlias() {
-        ApplicationContext context = new ClassPathXmlApplicationContext(
-            "classpath:spring/spring-alias.xml");
-        HelloWorld helloWorld_wangfeng =
-            (HelloWorld) context.getBean("wangfengHelloworld");
-        HelloWorld helloWorld_zhaochi =
-            (HelloWorld) context.getBean("zhaochiHelloworld");
-    }
+  @Test
+  public void testAlias() {
+    ApplicationContext context = new ClassPathXmlApplicationContext(
+        "classpath:spring/spring-alias.xml");
+    HelloWorld helloWorld_wangfeng = (HelloWorld) context
+        .getBean("wangfengHelloworld");
+    HelloWorld helloWorld_zhaochi = (HelloWorld) context
+        .getBean("zhaochiHelloworld");
+  }
 
 }

@@ -6,12 +6,12 @@ package com.wangfengbabe.learning_spring.aop.java_style_configuration
  */
 public class BeanOne {
 
-    public void foo() {
-        System.out.println("foo-one");
-    }
+  public void foo() {
+    System.out.println("foo-one");
+  }
 
-    public void bar() {
-        System.out.println("bar-one");
-    }
+  public void bar() {
+    System.out.println("bar-one");
+  }
 
 }

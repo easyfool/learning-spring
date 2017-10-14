@@ -5,12 +5,12 @@ package com.wangfengbabe.learning_spring.lazy_initialize;
  */
 public class Lazy {
 
-    static {
-        System.out.println("Lazy static block");
-    }
+  static {
+    System.out.println("Lazy static block");
+  }
 
-    {
-        System.out.println("Lazy constructor block");
-    }
+  {
+    System.out.println("Lazy constructor block");
+  }
 
 }

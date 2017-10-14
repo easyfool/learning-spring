@@ -16,15 +16,17 @@ import org.springframework.test.web.servlet.MockMvc;
  */
 public class HomeControllerTest {
 
-    @Test public void testHomePage() {
-        HomeController controller = new HomeController();
-        assertEquals("home", controller.home());
-    }
+  @Test
+  public void testHomePage() {
+    HomeController controller = new HomeController();
+    assertEquals("home", controller.home());
+  }
 
-    @Test public void testHomePageWithSpringMVC() throws Exception {
-        HomeController homeController = new HomeController();
-        MockMvc mockMvc = standaloneSetup(homeController).build();
-        mockMvc.perform(get("/")).andExpect(view().name("home"));
-    }
+  @Test
+  public void testHomePageWithSpringMVC() throws Exception {
+    HomeController homeController = new HomeController();
+    MockMvc mockMvc = standaloneSetup(homeController).build();
+    mockMvc.perform(get("/")).andExpect(view().name("home"));
+  }
 
 }

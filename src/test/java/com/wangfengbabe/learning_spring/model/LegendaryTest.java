@@ -18,10 +18,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
     ("classpath:spring/spring-instantiation_with_instance_factory_method.xml")
 public class LegendaryTest {
 
-    @Autowired IBook legendary;
+  @Autowired
+  IBook legendary;
 
-    @Test public void testStaticFactoryMethod() {
-        assertThat(legendary, notNullValue());
-    }
+  @Test
+  public void testStaticFactoryMethod() {
+    assertThat(legendary, notNullValue());
+  }
 
 }

@@ -7,6 +7,6 @@ import java.io.IOException;
  */
 public interface IPerform {
 
-    public void perform(int i) throws IOException;
+  public void perform(int i) throws IOException;
 
 }

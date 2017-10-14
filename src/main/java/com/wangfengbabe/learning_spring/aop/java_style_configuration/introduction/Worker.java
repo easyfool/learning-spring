@@ -8,11 +8,13 @@ import org.springframework.stereotype.Component;
 /**
  * Created by wangfeng on 28/06/2017.
  */
-@Component("worker") public class Worker implements IWork {
+@Component("worker")
+public class Worker implements IWork {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Worker.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(Worker.class);
 
-    @Override public void work() {
-        LOGGER.info("working");
-    }
+  @Override
+  public void work() {
+    LOGGER.info("working");
+  }
 }

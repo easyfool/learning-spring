@@ -10,40 +10,40 @@ import java.util.Set;
  */
 public class ComplexObject {
 
-    private Properties adminEmails;
-    private List someList;
-    private Map someMap;
-    private Set someSet;
+  private Properties adminEmails;
+  private List someList;
+  private Map someMap;
+  private Set someSet;
 
-    public Properties getAdminEmails() {
-        return adminEmails;
-    }
+  public Properties getAdminEmails() {
+    return adminEmails;
+  }
 
-    public void setAdminEmails(Properties adminEmails) {
-        this.adminEmails = adminEmails;
-    }
+  public void setAdminEmails(Properties adminEmails) {
+    this.adminEmails = adminEmails;
+  }
 
-    public List getSomeList() {
-        return someList;
-    }
+  public List getSomeList() {
+    return someList;
+  }
 
-    public void setSomeList(List someList) {
-        this.someList = someList;
-    }
+  public void setSomeList(List someList) {
+    this.someList = someList;
+  }
 
-    public Map getSomeMap() {
-        return someMap;
-    }
+  public Map getSomeMap() {
+    return someMap;
+  }
 
-    public void setSomeMap(Map someMap) {
-        this.someMap = someMap;
-    }
+  public void setSomeMap(Map someMap) {
+    this.someMap = someMap;
+  }
 
-    public Set getSomeSet() {
-        return someSet;
-    }
+  public Set getSomeSet() {
+    return someSet;
+  }
 
-    public void setSomeSet(Set someSet) {
-        this.someSet = someSet;
-    }
+  public void setSomeSet(Set someSet) {
+    this.someSet = someSet;
+  }
 }

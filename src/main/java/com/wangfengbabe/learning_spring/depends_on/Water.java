@@ -5,8 +5,8 @@ package com.wangfengbabe.learning_spring.depends_on;
  */
 public class Water {
 
-    public Water() {
-        System.out.println("water constructor");
-    }
+  public Water() {
+    System.out.println("water constructor");
+  }
 
 }

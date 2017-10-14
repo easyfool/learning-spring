@@ -14,11 +14,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration("classpath:spring/spring-depends_on.xml")
 public class DependsOnTest {
 
-    @Autowired private Fish fish;
+  @Autowired
+  private Fish fish;
 
-    @Test public void testDependsOnInitialize() {
+  @Test
+  public void testDependsOnInitialize() {
 
-    }
-
+  }
 
 }

@@ -26,29 +26,30 @@ import org.springframework.web.servlet.view.InternalResourceView;
  */
 public class SpittleControllerTest {
 
-    @Test public void shouldShowRecentSpittles() throws Exception {
-        List<Spittle> expectedSpittles = createSpittleList(20);
-        ISpittleService spittleService = mock(ISpittleService.class);
-        when(spittleService.findSpittles(Long.MAX_VALUE, 20))
-            .thenReturn(expectedSpittles);
-        SpittleController spittleController =
-            new SpittleController(spittleService);
-        MockMvc mockMvc = standaloneSetup(spittleController).setSingleView(
-            new InternalResourceView("/WEB-INF/views/spittles.jsp")).build();
-        mockMvc.perform(get("/spittles")).andExpect(view().name("spittles"))
-            .andExpect(model().attributeExists("spittleList")).andExpect(model()
+  @Test
+  public void shouldShowRecentSpittles() throws Exception {
+    List<Spittle> expectedSpittles = createSpittleList(20);
+    ISpittleService spittleService = mock(ISpittleService.class);
+    when(spittleService.findSpittles(Long.MAX_VALUE, 20))
+        .thenReturn(expectedSpittles);
+    SpittleController spittleController = new SpittleController(spittleService);
+    MockMvc mockMvc = standaloneSetup(spittleController)
+        .setSingleView(new InternalResourceView("/WEB-INF/views/spittles.jsp"))
+        .build();
+    mockMvc.perform(get("/spittles")).andExpect(view().name("spittles"))
+        .andExpect(model().attributeExists("spittleList"))
+        .andExpect(model()
             .attribute("spittleList", hasItems(expectedSpittles.toArray())));
 
+  }
 
+  private List<Spittle> createSpittleList(int count) {
+    List<Spittle> spittles = new ArrayList<Spittle>();
+    for (int i = 0; i < count; i++) {
+      spittles.add(new Spittle("Spittle" + i, new Date()));
     }
+    return spittles;
 
-    private List<Spittle> createSpittleList(int count) {
-        List<Spittle> spittles = new ArrayList<Spittle>();
-        for (int i = 0; i < count; i++) {
-            spittles.add(new Spittle("Spittle" + i, new Date()));
-        }
-        return spittles;
-
-    }
+  }
 
 }

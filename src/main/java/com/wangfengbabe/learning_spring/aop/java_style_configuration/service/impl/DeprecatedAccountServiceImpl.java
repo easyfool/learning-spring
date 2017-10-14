@@ -6,9 +6,10 @@ import org.springframework.stereotype.Component;
 /**
  * Created by wangfeng on 27/06/2017.
  */
-@Component public class DeprecatedAccountServiceImpl {
+@Component
+public class DeprecatedAccountServiceImpl {
 
-    public void print() {
+  public void print() {
 
-    }
+  }
 }

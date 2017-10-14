@@ -5,10 +5,10 @@ package com.wangfengbabe.learning_spring.factorymethod;
  */
 public class BookFactory {
 
-    private static IBook legendary = new Legendary();
+  private static IBook legendary = new Legendary();
 
-    public static IBook createLegendary() {
-        return legendary;
-    }
+  public static IBook createLegendary() {
+    return legendary;
+  }
 
 }

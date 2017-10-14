@@ -12,32 +12,31 @@ import org.springframework.aop.support.StaticMethodMatcherPointcut;
  */
 public class MyStaticPointcutTest {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        BeanOne beanOne = new BeanOne();
-        BeanTwo beanTwo = new BeanTwo();
+    BeanOne beanOne = new BeanOne();
+    BeanTwo beanTwo = new BeanTwo();
 
-        BeanOne proxyOne;
-        BeanTwo proxyTwo;
-        StaticMethodMatcherPointcut pc = new MyStaticPointcut();
+    BeanOne proxyOne;
+    BeanTwo proxyTwo;
+    StaticMethodMatcherPointcut pc = new MyStaticPointcut();
 
-        Advice advice = new SimpleAdvice();
-        Advisor advisor = new DefaultPointcutAdvisor(pc, advice);
+    Advice advice = new SimpleAdvice();
+    Advisor advisor = new DefaultPointcutAdvisor(pc, advice);
 
-        ProxyFactory proxyFactory = new ProxyFactory();
-        proxyFactory.addAdvisor(advisor);
-        proxyFactory.setTarget(beanOne);
-        proxyOne = (BeanOne) proxyFactory.getProxy();
-        proxyOne.foo();
-        proxyOne.bar();
+    ProxyFactory proxyFactory = new ProxyFactory();
+    proxyFactory.addAdvisor(advisor);
+    proxyFactory.setTarget(beanOne);
+    proxyOne = (BeanOne) proxyFactory.getProxy();
+    proxyOne.foo();
+    proxyOne.bar();
 
-        proxyFactory.addAdvisor(advisor);
-        proxyFactory.setTarget(beanTwo);
-        proxyTwo = (BeanTwo) proxyFactory.getProxy();
-        proxyTwo.foo();
-        proxyTwo.bar();
+    proxyFactory.addAdvisor(advisor);
+    proxyFactory.setTarget(beanTwo);
+    proxyTwo = (BeanTwo) proxyFactory.getProxy();
+    proxyTwo.foo();
+    proxyTwo.bar();
 
-    }
-
+  }
 
 }
