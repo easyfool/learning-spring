@@ -21,7 +21,7 @@ public class SystemArchitecture {
 
   }
 
-  // the execution of any method defined by the AccountService interface:
+  // the execution of any method defined by the IAccountService interface:
   @Pointcut("execution(* com.wangfengbabe.learning_spring.aop"
       + ".java_style_configuration.service.IAccountService.*(..))")
   public void anyOperationInAccountService() {
