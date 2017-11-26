@@ -321,3 +321,7 @@ gen
 # Code Recommenders
 
 # Scala IDE specific (Scala & Java development for Eclipse)
+
+.classpath
+.project
+
